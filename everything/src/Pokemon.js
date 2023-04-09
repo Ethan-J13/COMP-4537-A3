@@ -1,12 +1,8 @@
 import React from 'react'
+import { BrowserRouter, Route, Routes, Link, NavLink } from "react-router-dom";
 
-const prevPae = () => {
-  return (
-    <>
-      <h1>Goinga</h1>
-    </>
-  )
-}
+import Info from "./info";
+
 
 function Pokemon({ pokemon }) {
   const getThreeDigitId = (id) => {
@@ -17,7 +13,12 @@ function Pokemon({ pokemon }) {
 
   return (
     <>
-      <img onClick={prevPae} src={`https://github.com/fanzeyi/pokemon.json/raw/master/images/${getThreeDigitId(pokemon.id)}.png`} />
+    <BrowserRouter>
+      <NavLink to={`${getThreeDigitId(pokemon.id)}`} component={Info}>
+
+        <img onClick="window.location.reload();" src={`https://github.com/fanzeyi/pokemon.json/raw/master/images/${getThreeDigitId(pokemon.id)}.png`} />
+      </NavLink>
+      </BrowserRouter>
     </>
   )
 }

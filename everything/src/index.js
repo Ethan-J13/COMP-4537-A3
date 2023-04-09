@@ -4,6 +4,7 @@ import './index.css';
 import FilteredPagination from './FilteredPagination'
 import Search from './Search'
 import axios from 'axios'
+import Info from './info';
 
 
 function Main() {
@@ -23,6 +24,7 @@ function Main() {
     <>
       <Search types={types} checkedState={checkedState} setCheckedState={setCheckedState} />
       <FilteredPagination types={types} checkedState={checkedState} />
+      <Info/>
     </>
   )
 }
