@@ -9,7 +9,7 @@ function Pokemon({ pokemon }) {
 
   return (
     <>
-      <img alt='pokemon' src={`https://github.com/fanzeyi/pokemon.json/raw/master/images/${getThreeDigitId(pokemon.id)}.png`} />
+      <img src={`https://github.com/fanzeyi/pokemon.json/raw/master/images/${getThreeDigitId(pokemon.id)}.png`} />
     </>
   )
 }

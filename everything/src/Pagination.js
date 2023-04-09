@@ -1,6 +1,6 @@
 import React from 'react'
 
-function pagination({ numberOfPages, currentPage, setCurrentPage }) {
+function Pagination({ numberOfPages, currentPage, setCurrentPage }) {
   const pageNumbers = []
   for (let i = 1; i <= numberOfPages; i++) {
     pageNumbers.push(i)
@@ -15,17 +15,17 @@ function pagination({ numberOfPages, currentPage, setCurrentPage }) {
 
 
   return (
-    <div class="page-buttons">
+    <div>
       {(currentPage !== 1) && (<button onClick={prevPage}>prev </button>)}
 
       {
         pageNumbers.map(number => {
           if (number < currentPage + 6 && number > currentPage - 6)
-            return (<>
-              <button onClick={() => setCurrentPage(number)} className={(number == currentPage) ? 'active' : ''}>
+            return (
+              <button key={number} onClick={() => setCurrentPage(number)} className={(number == currentPage) ? 'active' : ''}>
                 {number}
               </button>
-            </>)
+            )
         })
       }
 
@@ -36,4 +36,4 @@ function pagination({ numberOfPages, currentPage, setCurrentPage }) {
   )
 }
 
-export default pagination
+export default Pagination
