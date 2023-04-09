@@ -12,8 +12,8 @@ var json = require('./data.json');
        <div class="poke-info">
            <img class="poke-display" src={`https://github.com/fanzeyi/pokemon.json/raw/master/images/${pokeID}.png`} />
            <div class="stats-div">
-            <p>{json[realPokeID].name.english}</p>
-            <p>{json[realPokeID].type[0]} {json[realPokeID].type[1]}</p>
+            <p id="poke-name">{json[realPokeID].name.english}</p>
+            <p id="poke-type">{json[realPokeID].type[0]} {json[realPokeID].type[1]}</p>
             <p>HP: {json[realPokeID].base.HP}</p>
             <p>Attack: {json[realPokeID].base.Attack}</p>
             <p>Defense: {json[realPokeID].base.Defense}</p>
