@@ -5,6 +5,7 @@ import FilteredPagination from './FilteredPagination'
 import Search from './Search'
 import axios from 'axios'
 import Info from './info';
+import Login from './Login';
 
 
 function Main() {
@@ -22,6 +23,7 @@ function Main() {
 
   return (
     <>
+      <Login/>
       <Search types={types} checkedState={checkedState} setCheckedState={setCheckedState} />
       <FilteredPagination types={types} checkedState={checkedState} />
       <Info/>

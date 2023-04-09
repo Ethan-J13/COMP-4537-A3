@@ -14,7 +14,7 @@ function Pokemon({ pokemon }) {
   return (
     <>
     <BrowserRouter>
-      <NavLink to={`${getThreeDigitId(pokemon.id)}`} component={Info}>
+      <NavLink to={`L/${getThreeDigitId(pokemon.id)}`} component={Info}>
 
         <img onClick="window.location.reload();" src={`https://github.com/fanzeyi/pokemon.json/raw/master/images/${getThreeDigitId(pokemon.id)}.png`} />
       </NavLink>

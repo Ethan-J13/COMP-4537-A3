@@ -4,15 +4,17 @@ var json = require('./data.json');
 
 function clearPoke(){
     const url = window.location.href;
-    window.location.href = url.slice(0, -3);    
+    window.location.href = url.slice(0, -4);    
 } 
 
  function Info() {
     const url = window.location.href;
+    const biggerSlice = url.slice(-5)
+
     const pokeID = url.slice(-3)
     const realPokeID = parseInt(pokeID) - 1
     console.log(realPokeID)
-    if (realPokeID != -1) {
+    if (realPokeID != -1 && biggerSlice.includes("L")) {
      return (
        <div class="poke-info">
            <img class="poke-display" src={`https://github.com/fanzeyi/pokemon.json/raw/master/images/${pokeID}.png`} />

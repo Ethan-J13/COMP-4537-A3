@@ -32,16 +32,21 @@ function FilteredPagination({ types, checkedState }) {
   const currentPokemons = pokemons.slice(indexOfFirstRecord, indexOfLastRecord)
   const numberOfPages = Math.ceil(pokemons.length / pokemonsPerPage);
 
-  return (
-    <>
-      < Page currentPokemons={currentPokemons} currentPage={currentPage} />
-      < Pagination
-        numberOfPages={numberOfPages}
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-      />
-    </>
-  )
+  const url = window.location.href;
+  const pokeID = url.slice(-5)
+  console.log(pokeID)
+  if (pokeID.includes("L")) {
+    return (
+        <>
+        < Page currentPokemons={currentPokemons} currentPage={currentPage} />
+        < Pagination
+            numberOfPages={numberOfPages}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+        />
+        </>
+    )
+  }
 }
 
 export default FilteredPagination
