@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 function Pokemon({ pokemon }) {
   const getThreeDigitId = (id) => {
     if (id < 10) return `00${id}`
