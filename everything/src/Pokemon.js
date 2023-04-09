@@ -1,5 +1,12 @@
 import React from 'react'
 
+const prevPae = () => {
+  return (
+    <>
+      <h1>Goinga</h1>
+    </>
+  )
+}
 
 function Pokemon({ pokemon }) {
   const getThreeDigitId = (id) => {
@@ -10,7 +17,7 @@ function Pokemon({ pokemon }) {
 
   return (
     <>
-      <img src={`https://github.com/fanzeyi/pokemon.json/raw/master/images/${getThreeDigitId(pokemon.id)}.png`} />
+      <img onClick={prevPae} src={`https://github.com/fanzeyi/pokemon.json/raw/master/images/${getThreeDigitId(pokemon.id)}.png`} />
     </>
   )
 }
