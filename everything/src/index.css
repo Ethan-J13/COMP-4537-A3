@@ -105,3 +105,18 @@ body {
     padding: 10px;
   }
 
+  .center {
+    margin: auto;
+    width: 100px;
+    margin-top: 3px;
+
+  }
+
+  #logOut {
+    background-color: #b90000;
+    margin: auto;
+    width: 100px;
+    border-radius: 25px;
+    
+  }
+
