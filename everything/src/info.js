@@ -7,6 +7,11 @@ function clearPoke(){
     window.location.href = url.slice(0, -4);    
 } 
 
+function logOut(){
+    const url = window.location.href;
+    window.location.href = url.slice(0, -2);    
+} 
+
  function Info() {
     const url = window.location.href;
     const biggerSlice = url.slice(-5)
@@ -31,6 +36,12 @@ function clearPoke(){
            </div>
        </div>
      );
+    } else if (biggerSlice.includes("L")) {
+        return (
+            <div class="center">
+                <button id="logOut" onClick={logOut}>Log Out</button>
+            </div>
+        )
     }
 
  }
